@@ -1,0 +1,26 @@
+{
+  "name": "docsify-runkit-plugin",
+  "version": "1.0.4",
+  "description": "Docsify plugin for code snippets that embed Runkit dynamically",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NovikovEvgeny/docsify-runkit-plugin.git"
+  },
+  "keywords": [
+    "docsify",
+    "runkit",
+    "js",
+    "javascript",
+    "embed"
+  ],
+  "author": "Evgeniy Novikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NovikovEvgeny/docsify-runkit-plugin/issues"
+  },
+  "homepage": "https://github.com/NovikovEvgeny/docsify-runkit-plugin#readme"
+}
