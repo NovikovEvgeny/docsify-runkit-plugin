@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Docsify runkit plugin',
+      repo: '',
+      auto2top: true,
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
+      subMaxLevel: 3,
+
+      relativePath: true,
+
+      runkitPlugin: {
+        languages: ["js", "javascript", "nodejs"],
+        getEmbedOptions: function(source, defaultOptions) {
+          const mode = (source || "").includes("// use-as-endpoint") ? "endpoint" : "default";
+          return {
+              ...defaultOptions,
+              source: source.replace('// use-as-endpoint', ''),
+              mode,
+              preamble: mode === "endpoint" ? 'const express = require("@runkit/runkit/express-endpoint/1.0.0"); const app = express(exports);' : '',
+          };
+        }
+      },
+  }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
+  <script src="https://embed.runkit.com"></script>
+  <script src="//unpkg.com/docsify-runkit-plugin/index.js"></script>
+</body>
+</html>

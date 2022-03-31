@@ -1,6 +1,6 @@
 {
   "name": "docsify-runkit-plugin",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Docsify plugin for code snippets that embed Runkit dynamically",
   "main": "index.js",
   "scripts": {
